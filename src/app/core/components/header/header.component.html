@@ -1,11 +1,49 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+<header class="header" data-header>
+  <div class="container">
+      <nav class="navbar navbar-expand-lg bg-body-tertiary" style="background-color: red;">
+
+          <div class="container-fluid">
+    <h1>
+      <a href="#" class="logo">TheEvents<span class="span"></span></a>
+    </h1>
+    <div class=" nav justify-content-end" id="navbarSupportedContent">
+      
+      <ul class="nav justify-content-end">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" [routerLink]="['Home']"  routerLinkActive="link-active">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"  [routerLink]="['About']" routerLinkActive="link-active">Abous Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"  [routerLink]="['Events']" routerLinkActive="link-active">Events</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/auth/register']"  routerLinkActive="link-active">Register</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['Sponsors']"  routerLinkActive="link-active">Sponsors</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['Contact']"  routerLinkActive="link-active">Contact Us</a>
+        </li>
+        
+        
+        <li class="nav-item">
+          <div class="header-btn-group">
+            <button class="btn btn-hover" [routerLink]="['/auth/login']" routerLinkActive="link-active">Login</button>
+            <button class="nav-toggle-btn" aria-label="Toggle Menu" >
+              <span class="line top"></span>
+              <span class="line middle"></span>
+              <span class="line bottom"></span>
+            </button>
+          </div>
+          <!--<a class="nav-link" class="btn btn-hover" [routerLink]="['/auth/login']" routerLinkActive="link-active">Login</a>-->
+        </li>
+      </ul>
+      <!--<ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="#">Home</a>
         </li>
@@ -33,7 +71,34 @@
       <form class="d-flex" role="search">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
+      </form>-->
     </div>
   </div>
 </nav>
+
+
+ <!--section 2 -->
+<!--<section id="hero">
+  <div class="hero-container" data-aos="zoom-in" data-aos-delay="100">
+     <h1 class="mb-4 pb-0">The Annual<br><span>Marketing</span> Conference</h1>
+     <p class="mb-4 pb-0">10-12 December, Ludhiana, Punjab</p>
+     <div class="d-grid gap-2 d-md-block">
+      <button class="btn btn-primary" class="btn btn-hover" type="button">Seek your Events</button>
+      <button class="btn btn-primary" class="btn btn-hover" type="button">Organize your Events</button>
+    </div>
+   
+      <a href="https://youtu.be/D3CwNOnYAZsQ" class="glightbox play-btn mb-4"></a> <a href="#about" class="about-btn scrollto">Seek for Events</a>
+     <a href="https://youtu.be/D3CwNOnYAZsQ" class="glightbox play-btn mb-4"></a> <a href="#about" class="about-btn scrollto">Organize you Events</a>
+  </div>
+</section>-->
+  
+  
+  
+  
+  
+  
+
+
+
+
+

@@ -16,6 +16,8 @@ const routes: Routes = [
         //  auth/register
         path: "register",
         component: RegisterComponent,
+        
+        
       }
     ]
   }

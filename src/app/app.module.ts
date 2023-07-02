@@ -9,6 +9,7 @@ import { ReservationModule } from './features/reservation/reservation.module';
 import { CoreModule } from './core/core.module';
 import {TokenInterceptor} from "./core/interceptors/token.interceptor";
 import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
+import { IonicModule } from '@ionic/angular';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
     AuthModule,
     EventModule,
     ReservationModule,
+    IonicModule.forRoot(),
   ],
   providers: [
     {

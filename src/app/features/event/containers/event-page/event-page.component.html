@@ -1,1 +1,64 @@
-<p>event-page works!</p>
+<form class="event-form">
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="nameEvent">Nom de l'événement</label>
+        <input type="text" class="form-control" id="nameEvent" name="nameEvent" required>
+      </div>
+      <div class="form-group col-md-6">
+        <label for="eventCategory">Catégorie de l'événement</label>
+        <select class="form-control" id="eventCategory" name="eventCategory" required>
+          <option value="CATEGORIE_1">Catégorie 1</option>
+          <option value="CATEGORIE_2">Catégorie 2</option>
+          <!-- Ajoutez d'autres options en fonction de vos besoins -->
+        </select>
+      </div>
+    </div>
+  
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="typeEvent">Type d'événement</label>
+        <select class="form-control" id="typeEvent"  name="typeEvent" required>
+          <option value="TYPE_1">Type 1</option>
+          <option value="TYPE_2">Type 2</option>
+          <!-- Ajoutez d'autres options en fonction de vos besoins -->
+        </select>
+      </div>
+      <div class="form-group col-md-6">
+        <label for="localisation">Localisation</label>
+        <input type="text" class="form-control" id="localisation" name="localisation" required>
+      </div>
+    </div>
+  
+    <div class="form-group">
+      <label for="description">Description</label>
+      <textarea class="form-control" id="description"  name="description" required></textarea>
+    </div>
+  
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="nbrMax">Nombre maximum</label>
+        <input type="number" class="form-control" id="nbrMax"  name="nbrMax" required>
+      </div>
+      <div class="form-group col-md-6">
+        <label for="startDateEvent">Date de début</label>
+        <input type="date" class="form-control" id="startDateEvent"  name="startDateEvent" required>
+      </div>
+    </div>
+  
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="endDate">Date de fin</label>
+        <input type="date" class="form-control" id="endDate"  name="endDate" required>
+      </div>
+      <div class="form-group col-md-6">
+        <label for="statut">Statut</label>
+        <select class="form-control" id="statut"  name="statut" required>
+          <option value="STATUT_1">Statut 1</option>
+          <option value="STATUT_2">Statut 2</option>
+          <!-- Ajoutez d'autres options en fonction de vos besoins -->
+        </select>
+      </div>
+    </div>
+  
+    <button type="submit" class="btn btn-primary">Enregistrer</button>
+  </form>
