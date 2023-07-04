@@ -4,6 +4,7 @@ import { HomePageComponent } from './components/Home/home-page/home-page.compone
 import { AboutComponent } from './components/AboutUs/about/about.component';
 import { SponsorsComponent } from './components/Sponsors/sponsors/sponsors.component';
 import { ContactComponent } from './components/ContactUs/contact/contact.component';
+import { BrowserModule } from '@angular/platform-browser';
 
 
 
@@ -15,7 +16,7 @@ import { ContactComponent } from './components/ContactUs/contact/contact.compone
     ContactComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,BrowserModule
   ]
 })
 export class SharedModule { }

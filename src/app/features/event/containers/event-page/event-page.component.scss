@@ -1,16 +1,30 @@
+body {
+  background-color: var(--white);
+  color: var(--sonic-silver);
+  font-size: 1.6rem;
+  line-height: 1.6;
+  overflow-x: hidden;
+  position: relative!important;
+  overflow-y: scroll!important;
+  scroll-behavior: smooth;
+}
+
+
 .event-form {
-    max-width: 500px;
-    margin: 0 auto;
-  }
+  margin-top : -90px;
+  padding : 9rem;
+  margin-inline-start: 120px;
   
-  .event-form .form-row {
-    margin-bottom: 20px;
-  }
-  
-  .event-form label {
-    font-weight: bold;
-  }
-  
-  .event-form button[type="submit"] {
-    width: 100%;
-  }
+}
+
+.event-form .form-row {
+  margin-bottom: 20px;
+}
+
+.event-form label {
+  font-weight: bold;
+}
+
+.event-form button[type="submit"] {
+  width: 100%;
+}

@@ -10,6 +10,9 @@ import { CoreModule } from './core/core.module';
 import {TokenInterceptor} from "./core/interceptors/token.interceptor";
 import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
 import { IonicModule } from '@ionic/angular';
+import { AboutComponent } from './shared/components/AboutUs/about/about.component';
+import { HomePageComponent } from './shared/components/Home/home-page/home-page.component';
+
 
 @NgModule({
   declarations: [
@@ -32,6 +35,9 @@ import { IonicModule } from '@ionic/angular';
       multi: true
     }
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent
+  ]
+
+//schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }

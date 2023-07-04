@@ -1,11 +1,30 @@
 .link-active{
-  background-color: hsl(23, 49%, 82%);
+  background-color: hsl(32, 100%, 59%);
+}
+header {
+  background-color: #333;
+  padding-inline: 15px; 
+}
+.navbar {
+  background-color: #333; 
+  color: white; 
+  padding: 10px; 
+  margin-bottom: 20px; 
+  width: 100%;
 }
 
+.navbar a.navbar-item {
+  color: white; 
+  padding: 10px; 
+}
+
+.navbar a.navbar-item:hover {
+  color: #ccc; 
+}
+
+
 :root {
-  /**
-   * colors
-   */
+  
   --rich-black-fogra-29: hsl(210, 26%, 7%);
   --champagne-pink_20: hsla(23, 61%, 86%, 0.2);
   --independence_30: hsla(245, 17%, 29%, 0.3);
@@ -68,25 +87,7 @@ select,
 textarea { width: 100%; }
 button { cursor: pointer; }
 
-
-html {
-  font-family: var(--ff-roboto);
-  font-size: 10px;
-  scroll-behavior: smooth;
-}
-body {
-  background-color: var(--white);
-  color: var(--sonic-silver);
-  font-size: 1.6rem;
-  line-height: 1.6;
-  overflow-x: hidden;
-  position: relative!important;
-  overflow-y: scroll!important;
-}
-
-body.active { overflow: hidden; }
-
-.container { padding-inline: 15px; }
+//.container { padding-inline: 15px; }
 
 .h1,
 .h2,
@@ -109,6 +110,10 @@ background-color: hsl(28, 100%, 58%);
   padding-inline: var(--padding-inline, 35px);
   transition: var(--transition-1);
 }
+.socialtop {
+  float: right;
+  margin-right: 5%;
+}
 
 /*.btn-hover ::after{
   content: "";
@@ -124,4 +129,86 @@ background-color: hsl(28, 100%, 58%);
   transition: var(--transition-2);
 }*/
 
-/*.btn-hover:is(:hover, :focus)::after { --scale: 500; }*/
+/*.btn-hover:is(:hover, :focus)::after { --scale: 500; }**/
+
+
+/*
+* {
+  background: #444;
+font-family: 'Outfit', sans-serif;
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+outline: none;
+border: none;
+text-decoration: none;
+text-transform: capitalize;
+transition: .2s linear;
+
+}*/
+
+
+ /*
+ body{
+ background: #222;
+ }
+ 
+ .hedear{
+ position: fixed;
+ top: 0;left: 0;right: 0;
+ z-index: 10000;
+ background:#333;
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ padding: 1.5rem 9%;
+ }
+ .hedear .logo{
+ font-weight: bolder;
+ color: #fff;
+ font-size: 2.5rem;
+ 
+ }
+ .hedear .logo span{
+ color: var(--main-color);
+ }
+ .hedear .navbar a{
+ font-size: 1.7rem;
+ color: #fff !important;
+ }*/
+ /** {
+  margin: 0;
+  padding: 0;
+
+}
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+#header{
+  background-image: url("https://img.appcraft.events/v7/www.appcraft.events/wp-content/uploads/2022/08/pexels-fauxels-3183150-scaled.jpg?func=bound&w=1024&h=1024");
+  height: 80vh;
+  background-size: cover;
+  background-position:center;
+}
+.navbar {
+  background-image: linear-gradient(to right, #454546, #0a0a0a);
+  padding: 0 !important;
+}
+.navbar-nav li a{
+  float: right;
+  color: #fff !important;
+}
+.navbar-toggler{
+  border: none !important;
+  outline: none !important;
+}
+nav .fa-bars{
+  color: #fff;
+  font-size: 26px;
+
+}
+h1{
+color: white;
+margin: 20px;
+}
+*/

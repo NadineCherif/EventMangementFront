@@ -15,5 +15,5 @@ export class EventPageComponent {
     getEvent(){
       this._openService.getEvent("0");
     }
-
+ 
 }
