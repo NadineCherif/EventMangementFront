@@ -1,79 +1,227 @@
-/*body {
-    font-family: Arial, sans-serif;
+/**
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+}
+
+.about-section {
+  padding: 50px;
+  text-align: center;
+  background-color: #474e5d;
+  color: white;
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}*/
+/**section 2/
+   /* Styling the body */
+   body {
     margin: 0;
     padding: 0;
-  }
-  */
-  header {
-    background-color: #333;
+}
+/* Styling section, giving background
+    image and dimensions */
+section {
+    width: 100%;
+    height: 100vh;
+   /* background:
+        url(
+'https://media.geeksforgeeks.org/wp-content/uploads/20210408155049/gfg9.png'
+        );*/
+    background-size: cover;
+}
+/* Styling the left floating section */
+section .leftBox {
+    width: 50%;
+    height: 100%;
+    float: left;
+    padding: 50px;
+    box-sizing: border-box;
+}
+/* Styling the background of
+    left floating section */
+section .leftBox .content {
     color: #fff;
-    padding: 20px;
-    text-align: center;
-  }
-  
-  header h1 {
-    font-size: 24px;
-  }
-  
-  section {
-    padding: 40px 0;
-  }
-  
-  .container {
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 0 20px;
-  }
-  
-  h2 {
-    font-size: 20px;
-    margin-bottom: 10px;
-  }
-  
-  p {
-    line-height: 1.5;
-  }
-  
-  ul {
-    padding-left: 20px;
-  }
-  
-  footer {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-  }
-  
-  footer p {
+    background: rgba(246, 241, 241, 0.5);
+    padding: 40px;
+    transition: .5s;
+}
+/* Styling the hover effect 
+    of left floating section */
+section .leftBox .content:hover {
+    background:#71D0C5 // #e91e63;
+}
+/* Styling the header of left
+    floating section */
+section .leftBox .content h1 {
     margin: 0;
-  }
-  
-
-  /*#about{
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding: 0;
+    font-size: 50px;
+    text-transform: uppercase;
 }
-#about .col-md-6{
-    padding: 20px 10px;
+/* Styling the paragraph of
+    left floating section */
+section .leftBox .content p {
+    margin: 10px 0 0;
+    padding: 0;
 }
-#about h3{
-  margin: 20px auto;
+/* Styling the three events section */
+section .events {
+    position: relative;
+    width: 50%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    float: right;
+    box-sizing: border-box;
+}
+/* Styling the links of
+the events section */
+section .events ul {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0;
+    padding: 40px;
+    box-sizing: border-box;
+}
+/* Styling the lists of the event section */
+section .events ul li {
+    list-style: none;
+    background: #fff;
+    box-sizing: border-box;
+    height: 200px;
+    margin: 15px 0;
+}
+/* Styling the time class of events section */
+section .events ul li .time {
+  position: relative;
+  padding: 20px;
+  background: #262626;
+  box-sizing: border-box;
+  width: 30%;
+  height: 100%;
+  float: left;
   text-align: center;
+  transition: .5s;
 }
-#about img{
-     width: 50vh;
+/* Styling the hover effect
+    of events section */
+section .events ul li:hover .time {
+    background: #D0E3AB;
 }
-#about .btn{
-    background-color: #a88007;
-    text-align: center;
+/* Styling the header of time
+    class of events section */
+section .events ul li .time h2 {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     color: #fff;
+    font-size: 60px;
+    line-height: 30px;
 }
-#about .btn1{
-    text-align: center;
-    padding: 5px;
+/* Styling the texts of time
+class of events section */
+section .events ul li .time h2 span {
+    font-size: 30px;
 }
-#about .btn1 a{
-  text-decoration: none;
-  color: #fff;
-}*/
+
+/* Styling the details
+class of events section */
+section .events ul li .details {
+    padding: 20px;
+    background: #fff;
+    box-sizing: border-box;
+    width: 70%;
+    height: 100%;
+    float: left;
+}
+/* Styling the header of the
+details class of events section */
+section .events ul li .details h3 {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    font-size: 22px;
+}
+/* Styling the lists of details
+class of events section */
+section .events ul li .details p {
+    position: relative;
+    margin: 10px 0 0;
+    padding: 0;
+    font-size: 16px;
+}
+/* Styling the links of details
+class of events section */
+section .events ul li .details a {
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px 15px;
+    border: 1.5px solid #262626;
+    margin-top: 8px;
+    font-size: 18px;
+    transition: .5s;
+}
+/* Styling the details class's hover effect */
+section .events ul li .details a:hover {
+    background: #D0E3AB;
+    color: #fff;
+    border-color: #D0E3AB;
+}

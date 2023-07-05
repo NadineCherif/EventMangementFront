@@ -4,6 +4,9 @@ import { HomePageComponent } from './shared/components/Home/home-page/home-page.
 import { AboutComponent } from './shared/components/AboutUs/about/about.component';
 import { SponsorsComponent } from './shared/components/Sponsors/sponsors/sponsors.component';
 import { ContactComponent } from './shared/components/ContactUs/contact/contact.component';
+import { EventPageComponent } from './features/event/containers/event-page/event-page.component';
+import { LoginComponent } from './features/auth/containers/login/login.component';
+import { RegisterComponent } from './features/auth/containers/register/register.component';
 
 const routes: Routes = [
   
@@ -20,7 +23,12 @@ component: SponsorsComponent,
 },
 { path: "Contact",
 component: ContactComponent,
+},
+{
+path: "login",
+component: LoginComponent,
 }
+
 ];
 
 @NgModule({

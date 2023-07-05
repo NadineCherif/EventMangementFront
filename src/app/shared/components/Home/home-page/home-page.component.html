@@ -1,5 +1,5 @@
 <!--section -->
-<body>
+<!--<body>
   
 <section class="hero" id="home" style="background-image: url('https://img.appcraft.events/v7/www.appcraft.events/wp-content/uploads/2022/08/pexels-fauxels-3183150-scaled.jpg?func=bound&w=1024&h=1024')">
     <div class="container">
@@ -11,18 +11,20 @@
     </div>
   </section>
 </body>
-
-
-<!--
-<section id="home">
-
-  <div class="container">
-    <div class="welcome text-center wow fadeInUp">
-      <p>Welcome to CALL OF DUTY: The original MODERN WARFARE, the first and the best! </p>
-      <h2 class="h1 hero-title" style="color: rgb(6, 79, 143);">The events</h2>
-      <p class="hero-text"  style="color: rgb(109, 179, 241);">Food is any substance consumed to provide nutritional support for an organism.</p>
-      <button class="btn" type="button" >Seek your Events</button><br><button class="btn" type="button">Organize your Events</button>
-</div>
-  </div>
- 
 -->
+
+
+
+<div class="intro">
+  <h1>The events</h1>
+  <span>The Events est l'endroit où vous pouvez découvrir les événements à venir et participer à des activités passionnantes. 
+    Vous trouverez ici une liste complète des événements organisés.</span>
+       <span> Rejoignez-nous dans la section "Événements" et plongez dans un monde d'opportunités et de divertissement captivants.</span>
+       <br>
+
+       <button class="btn" [routerLink]="['/Events']" routerLinkActive="link-active">Seek your Events</button>
+       <br>
+       <button class="btn" [routerLink]="['/login']" routerLinkActive="link-active">Organize your Events</button>
+
+
+</div>

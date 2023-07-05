@@ -1,4 +1,4 @@
-.link-active{
+/*.link-active{
   background-color: hsl(32, 100%, 59%);
 }
 header {
@@ -212,3 +212,58 @@ color: white;
 margin: 20px;
 }
 */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+#nav-bar {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+/*div navbar*/
+.navbar {
+    background-color: #214C63; //linear-gradient(to right, #040303, #e67829);
+    padding: 0 !important;
+}
+
+/*Website*/
+.navbar-brand {
+    height: 40px;
+    padding-left: 20px;
+    color: #fff !important;
+    font-weight: 700;
+}
+
+/*div li*/
+.navbar-nav li {
+    padding: 0 10px;
+}
+
+/*liste */
+.navbar-nav li a {
+    color: #fff !important;
+    font-weight: 600;
+    float: right;
+    text-align: left;
+}
+
+/*hamburger*/
+.fa-bars {
+    color: #fff;
+    font-size: 30px !important;
+}
+
+.navbar-toggler {
+    outline: none !important;
+}
