@@ -15,15 +15,13 @@ import { AuthRouting } from '../features/auth/auth-routing';
 
 @NgModule({
   declarations: [
-    HomePageComponent,
     AboutComponent,
     SponsorsComponent,
     ContactComponent,
-    EventPageComponent,
     LoginComponent,
   ],
   imports: [
-    CommonModule,BrowserModule
+    CommonModule,BrowserModule,
   ]
 })
 export class SharedModule { }

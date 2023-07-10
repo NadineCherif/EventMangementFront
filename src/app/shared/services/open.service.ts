@@ -12,6 +12,6 @@ export class OpenService {
   }
 
   getEvent(id: string){
-    return this._openHttpClient.get('');
+    return this._openHttpClient.get('http:localhost:8088/EventManagement/Event/retrieve-all-Events');
   }
 }

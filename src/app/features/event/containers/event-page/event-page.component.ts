@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import {OpenService} from "../../../../shared/services/open.service";
-
 @Component({
   selector: 'app-event-page',
   templateUrl: './event-page.component.html',
@@ -13,7 +12,7 @@ export class EventPageComponent {
 
 
     getEvent(){
-      this._openService.getEvent("0");
+      this._openService.getEvent("1");
     }
  
 }

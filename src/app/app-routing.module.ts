@@ -7,6 +7,7 @@ import { ContactComponent } from './shared/components/ContactUs/contact/contact.
 import { EventPageComponent } from './features/event/containers/event-page/event-page.component';
 import { LoginComponent } from './features/auth/containers/login/login.component';
 import { RegisterComponent } from './features/auth/containers/register/register.component';
+import { AuthModule } from './features/auth/auth.module';
 
 const routes: Routes = [
   
@@ -32,7 +33,11 @@ component: LoginComponent,
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  imports: [
+  RouterModule.forRoot(routes)],
+  exports: [
+  RouterModule,
+  
+  ]
 })
 export class AppRoutingModule { }
