@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import { AuthRouting } from './auth-routing';
 import { LoginComponent } from './containers/login/login.component';
 import { RegisterComponent } from './containers/register/register.component';
-import { HomePageComponent } from 'src/app/shared/components/Home/home-page/home-page.component';
 import { AppRoutingModule } from 'src/app/app-routing.module';
 
 
@@ -11,12 +10,12 @@ import { AppRoutingModule } from 'src/app/app-routing.module';
 @NgModule({
   declarations: [
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
     ],
   imports: [
     CommonModule,
     AuthRouting,
-    AppRoutingModule
+    AppRoutingModule,
   ]
 })
 export class AuthModule { }

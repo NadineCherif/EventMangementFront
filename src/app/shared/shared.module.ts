@@ -16,16 +16,14 @@ import { TicketsComponent } from './components/tickets/tickets.component';
 
 @NgModule({
   declarations: [
-    HomePageComponent,
     AboutComponent,
     SponsorsComponent,
     ContactComponent,
-    EventPageComponent,
     LoginComponent,
     TicketsComponent,
   ],
   imports: [
-    CommonModule,BrowserModule
+    CommonModule,BrowserModule,
   ]
 })
 export class SharedModule { }
