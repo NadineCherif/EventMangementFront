@@ -10,6 +10,7 @@ import { EventPageComponent } from '../features/event/containers/event-page/even
 import { LoginComponent } from '../features/auth/containers/login/login.component';
 import { AuthModule } from '../features/auth/auth.module';
 import { AuthRouting } from '../features/auth/auth-routing';
+import { TicketsComponent } from './components/tickets/tickets.component';
 
 
 
@@ -21,6 +22,7 @@ import { AuthRouting } from '../features/auth/auth-routing';
     ContactComponent,
     EventPageComponent,
     LoginComponent,
+    TicketsComponent,
   ],
   imports: [
     CommonModule,BrowserModule
