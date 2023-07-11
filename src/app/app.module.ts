@@ -35,7 +35,7 @@ import { AuthRouting } from './features/auth/auth-routing';
     EventModule,
     ReservationModule,
     IonicModule.forRoot(),
-    BrowserAnimationsModule,
+    BrowserAnimationsModule
    
   ],
   providers: [
