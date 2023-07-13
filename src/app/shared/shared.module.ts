@@ -14,13 +14,14 @@ import { TicketsComponent } from './components/tickets/tickets.component';
 
 
 
+
 @NgModule({
   declarations: [
     AboutComponent,
     SponsorsComponent,
     ContactComponent,
     LoginComponent,
-    TicketsComponent,
+    TicketsComponent
   ],
   imports: [
     CommonModule,BrowserModule,
