@@ -1,93 +1,6 @@
 * {
   padding-inline: 15px; 
    }
-  /*:root {
-  
-    --rich-black-fogra-29: hsl(210, 26%, 7%);
-    --champagne-pink_20: hsla(23, 61%, 86%, 0.2);
-    --independence_30: hsla(245, 17%, 29%, 0.3);
-    --gray-x-11-gray: hsl(0, 0%, 73%);
-    --champagne-pink: hsl(23, 61%, 86%);
-    --spanish-gray: hsl(0, 0%, 60%);
-    --sonic-silver: hsl(0, 0%, 47%);
-    --deep-saffron: hsl(32, 100%, 59%);
-    --dark-orange: hsl(28, 100%, 58%);
-    --desert-sand: hsl(23, 49%, 82%);
-    --isabelline: hsl(38, 44%, 96%);
-    --gainsboro: hsl(0, 0%, 87%);
-    --tangerine: hsl(31, 84%, 50%);
-    --cinnabar: hsl(3, 90%, 55%);
-    --black_95: hsla(0, 0%, 0%, 0.95);
-    --cultured: hsl(0, 0%, 93%);
-    --white: hsl(0, 0%, 100%);
-    --black: hsl(0, 0%, 0%);
-    --onyx: hsl(0, 0%, 27%);
-  }
-  .btn {
-    background-color: hsl(28, 100%, 58%);
-    color: hsl(0, 0%, 100%);
-      font-family: var(--ff-rubik);
-      font-size: var(--fs-4);
-      font-weight: var(--fw-500);
-      height: var(--height, 45px);
-      padding-inline: var(--padding-inline, 35px);
-      transition: var(--transition-1);
-    }
-    a,
-    img,
-    svg,
-    span,
-    input,
-    select,
-    button,
-    textarea,
-    ion-icon { display: block; 
-    }
-  
-  img { height: auto; }
-  
-  input,
-  select,
-  button,
-  textarea {
-    background: none;
-    border: none;
-    font: inherit;
-  }
-  
-  button { cursor: pointer; }
-
-
-  .hero-banner { display: none; }
-
-  .hero {
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    padding-block: 145px 60px ;
-    text-align: center;
-  }
-.hero-title {
-  color: var(--champagne-pink);
-  max-width: 12ch;
-  margin-inline: auto;
-}
-
-.hero-text {
-  color: var(--desert-sand);
-  margin-block: 15px 30px;
-  max-width: 44ch;
-  margin-inline: auto;
-}
-.hero .btn { 
-  margin-inline: auto; 
-  }
-
-.btn-container {
-  display: inline-block;
-}
-*/
-
 /* CSS for main section */
 .intro {
   display: flex;
@@ -111,21 +24,18 @@
   margin: 0;
 }
 
-.intro p {
-  font-size: 20px;
+.intro span {
+  font-size: 15px;
   color: #d1d1d1;
-  text-transform: uppercase;
-  margin: 20px 0;
 }
 
 .intro button {
   background-color: #71D0C5;
-  color: #000;
+  color: white;
   padding: 10px 25px;
   border: none;
   border-radius: 5px;
   font-size: 20px;
   font-weight: bold;
   cursor: pointer;
-  box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.4)
 }

@@ -12,7 +12,6 @@ import { IonicModule } from '@ionic/angular';
 import { AboutComponent } from './shared/components/AboutUs/about/about.component';
 import { HomePageComponent } from './shared/components/Home/home-page/home-page.component';
 
-import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TicketsComponent } from './shared/components/tickets/tickets.component';
 
