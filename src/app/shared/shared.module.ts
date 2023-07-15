@@ -10,20 +10,21 @@ import { EventPageComponent } from '../features/event/containers/event-page/even
 import { LoginComponent } from '../features/auth/containers/login/login.component';
 import { AuthModule } from '../features/auth/auth.module';
 import { AuthRouting } from '../features/auth/auth-routing';
+import { TicketsComponent } from './components/tickets/tickets.component';
+
 
 
 
 @NgModule({
   declarations: [
-    HomePageComponent,
     AboutComponent,
     SponsorsComponent,
     ContactComponent,
-    EventPageComponent,
     LoginComponent,
+    TicketsComponent
   ],
   imports: [
-    CommonModule,BrowserModule
+    CommonModule,BrowserModule,
   ]
 })
 export class SharedModule { }

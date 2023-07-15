@@ -1,0 +1,204 @@
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+* {
+  box-sizing: border-box;
+}
+
+#myInput {
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL li a {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  display: block
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee;
+}
+
+div.scroll-container {
+  background-color: #333;
+  overflow: auto;
+  white-space: nowrap;
+  padding: 10px;
+}
+
+div.scroll-container img {
+  padding: 10px;
+}
+
+
+
+.ticket-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .ticket-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+
+  .ticket-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .ticket-details {
+    margin-bottom: 10px;
+  }
+
+  .ticket-price {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .button-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .buy-button {
+    flex: 1;
+    margin-right: 5px;
+  }
+
+
+</style>
+<body>
+
+  <div class="scroll-container">
+    <img src="    https://www.adobe.com/fr/express/learn/blog/media_1bf2d7e99ba6e767892bd84fbf1daa8cf09a933d3.jpeg?width=750&format=jpeg&optimize=medium
+    " alt="Cinque Terre" width="422" height="250">
+    <img src="https://img.freepik.com/vecteurs-premium/affiche-flyer-evenement-fete-musique-du-nouvel-an-2023-pour-publication-reseaux-sociaux_460848-16022.jpg?w=2000" alt="Cinque Terre" width="422" height="250">
+    <img src="https://img.freepik.com/premium-vector/2023-new-year-music-party-event-flyer-poster-social-media-post_460848-16010.jpg?w=2000" alt="Forest" width="422" height="250">
+    <img src="https://www.uafs.fr/wp-content/uploads/2021/04/JAS2021-AFFICHE-a-utiliser-pour-accueil-Journees-Architecture-en-sante.jpg" alt="Northern Lights" width="422" height="250">
+    <img src="https://realites.com.tn/fr/wp-content/uploads/2023/06/affiche_40x60cm_marathondesoasis2023_v4_rvb1-scaled.jpg" alt="Mountains" width="422" height="250">
+  </div>   
+  
+  
+    <div class="container">
+      <div class="row">
+        
+        <div class="ticket-card">
+          <img class="ticket-image" src="https://www.dynamique-mag.com/wp-content/uploads/94d8155cb7f2702d2b914dbfb56699d5.jpg" alt="Ticket Image">
+          <h2 class="ticket-title">"Theater Performance"</h2>
+          <div class="ticket-details">     
+            <p class="ticket-price"> VIP Price: <span id="price">$50</span></p>
+            <p class="ticket-price"> BASIC Price: <span id="price">$35</span></p>
+            <p class="ticket-price">Ticket Number: <span id="Number"></span>B456</p>
+          </div>
+          <div class="button-container">
+            <button class="btn btn-primary buy-button">VIP Ticket</button>
+            <button class="btn btn-primary buy-button">Basic Ticket</button>
+          </div>
+        </div>
+
+
+        <div class="ticket-card">
+          <img class="ticket-image" src="https://www.dynamique-mag.com/wp-content/uploads/94d8155cb7f2702d2b914dbfb56699d5.jpg" alt="Ticket Image">
+          <h2 class="ticket-title">"Theater Performance"</h2>
+          <div class="ticket-details">
+            <p class="ticket-price">BASIC Price: <span id="price">$15</span></p>
+            <p class="ticket-price"> VIP Price: <span id="price">$10</span></p>
+            <p class="ticket-price">Ticket Number: <span id="Number"></span>B456</p>
+          </div>
+          <div class="button-container">
+            <button class="btn btn-primary buy-button">VIP Ticket</button>
+            <button class="btn btn-primary buy-button">Basic Ticket</button>
+          </div>
+        </div>
+    
+
+<div class="ticket-card">
+  <img class="ticket-image" src="https://www.dynamique-mag.com/wp-content/uploads/94d8155cb7f2702d2b914dbfb56699d5.jpg" alt="Ticket Image">
+  <h2 class="ticket-title">"Concert Live"</h2>
+  <div class="ticket-details">
+    <p class="ticket-price">BASIC Price: <span id="basic-price">$40</span></p>
+    <p class="ticket-price">VIP Price: <span id="vip-price">$28</span></p>
+    <p class="ticket-price">Ticket Number: <span id="Number"></span>B776</p>
+  </div>
+  <div class="button-container">
+    <input type="radio" id="vip-option" name="category-option" value="VIP">
+    <label for="vip-option">VIP</label>
+    <input type="radio" id="basic-option" name="category-option" value="Basic" checked>
+    <label for="basic-option">Basic</label>
+  </div><br>
+  <div class="button-container">
+    <button class="btn btn-primary buy-button" id="buy-button">Buy Ticket</button>
+  </div>
+</div>
+
+<script>
+  var vipOption = document.getElementById("vip-option");
+  var basicOption = document.getElementById("basic-option");
+  var buyButton = document.getElementById("buy-button");
+
+  vipOption.addEventListener("change", function() {
+    updateButton();
+  });
+
+  basicOption.addEventListener("change", function() {
+    updateButton();
+  });
+
+  function updateButton() {
+    if (vipOption.checked) {
+      buyButton.textContent = "Buy VIP Ticket";
+    } else if (basicOption.checked) {
+      buyButton.textContent = "Buy Basic Ticket";
+    }
+  }
+
+  updateButton();
+</script>
+
+
+      </div>
+    </div>
+  </body>
+
+  
+  
+  
