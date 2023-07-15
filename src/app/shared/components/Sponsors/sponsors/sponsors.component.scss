@@ -16,10 +16,10 @@ body {
 }
 
 .c {
-  width: 100%;
+  width: 150%;
 }
 .p {
-  padding: 0px;
+  padding: 10px;
   background: white;
   border-radius: 0 0 6px 6px;
   position: absolute;
@@ -28,7 +28,7 @@ body {
   margin-left:-350px;
   margin-top: -170px;
   max-width: 700px;
-  width: 700px;
+  width: 1000px;
   max-height: 340px;
   height: 340px;
   box-shadow: 2px 3px 0 0 rgba(0, 0, 0, .2), 0px -340px 0 0 rgba(0, 0, 0, .3);
@@ -37,14 +37,8 @@ body {
 /* Sponsors Footer */
 
 .sponsorsFooter {
-  width: 100%;
-  height: auto;
-  padding: 40px 0 10px;
-  z-index: 14;
-  margin-top: 0px;
-  z-index: 1 !important;
   text-align: center !important;
-  z-index: 99;
+  width:auto;
 }
 
 .sponsorsFooter h1 {
@@ -122,3 +116,4 @@ body {
     margin: 15px 5px 0px;
   }
 }
+
