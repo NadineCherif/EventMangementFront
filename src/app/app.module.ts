@@ -18,6 +18,7 @@ import { TicketsComponent } from './shared/components/tickets/tickets.component'
 import { EventPageComponent } from './features/event/containers/event-page/event-page.component';
 import { LoginComponent } from './features/auth/containers/login/login.component';
 import { AuthRouting } from './features/auth/auth-routing';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -30,11 +31,12 @@ import { AuthRouting } from './features/auth/auth-routing';
     HttpClientModule,
     CoreModule,
     AppRoutingModule,
-    AuthModule,
+   // AuthModule,
     EventModule,
     ReservationModule,
     IonicModule.forRoot(),
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FormsModule
    
   ],
   providers: [

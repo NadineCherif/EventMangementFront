@@ -20,7 +20,7 @@
                 <a class="nav-link"  [routerLink]="['Events']" routerLinkActive="link-active"><i class="fa fa-fw fa-calendar"></i> Events</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" [routerLink]="['/auth/register']"  routerLinkActive="link-active"><i class="fa fa-fw fa-registered"></i> Register</a>
+                <a class="nav-link" [routerLink]="['Register']"  routerLinkActive="link-active"><i class="fa fa-fw fa-registered"></i> Register</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" [routerLink]="['Sponsors']"  routerLinkActive="link-active"><i class="fa fa-fw fa-flag"></i> Sponsors</a>
@@ -29,20 +29,17 @@
                 <a class="nav-link" [routerLink]="['Contact']"  routerLinkActive="link-active"><i class="fa fa-fw fa-envelope"></i> Contact Us</a>
               </li>
               <li class="nav-item">
-                <a class="btn btn-hover" [routerLink]="['/auth/login']" routerLinkActive="link-active"><i class="fa fa-fw fa-user"></i> Login</a>
+                <a class="btn btn-hover" [routerLink]="['login']" routerLinkActive="link-active"><i class="fa fa-fw fa-user"></i> Login</a>
               </li>
               <li class="nav-item">
-                <a class="btn btn-hover" [routerLink]="['Ticket']" routerLinkActive="link-active"><i class="fa fa-fw fa-user"></i> Get your Ticket!</a>
+                <a class="btn btn-hover" [routerLink]="['Ticket']" routerLinkActive="link-active"><i class="fa fa-fw fa-ticket"></i> Get your Ticket!</a>
               </li>
 
           </ul>
-       
-          <span class="fas fa-search search-icon"></span>
-
 
         </div>
         <button routerLink="cart" class="btn btn-primary">
-            <i style="font-size: 30px;" class="fas fa-cart-plus"></i>
+            <i style="font-size: 30px;" class="fa fa-cart-plus"></i>
             <div style="font-size: 10px;" class="badge bg-danger"></div>
         </button>
     
