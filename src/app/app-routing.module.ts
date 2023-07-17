@@ -8,7 +8,7 @@ import { EventPageComponent } from './features/event/containers/event-page/event
 import { LoginComponent } from './features/auth/containers/login/login.component';
 import { RegisterComponent } from './features/auth/containers/register/register.component';
 import { AuthModule } from './features/auth/auth.module';
-import { TicketsComponent } from './shared/components/tickets/tickets.component';
+import { TicketsComponent } from './features/tickets/tickets.component';
 
 const routes: Routes = [
   

@@ -13,7 +13,7 @@ import { AboutComponent } from './shared/components/AboutUs/about/about.componen
 import { HomePageComponent } from './shared/components/Home/home-page/home-page.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { TicketsComponent } from './shared/components/tickets/tickets.component';
+import { TicketsComponent } from './features/tickets/tickets.component';
 
 import { EventPageComponent } from './features/event/containers/event-page/event-page.component';
 import { LoginComponent } from './features/auth/containers/login/login.component';
