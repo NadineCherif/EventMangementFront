@@ -7,6 +7,7 @@ import { ContactComponent } from './shared/components/ContactUs/contact/contact.
 import { EventPageComponent } from './features/event/containers/event-page/event-page.component';
 import { LoginComponent } from './features/auth/containers/login/login.component';
 import { RegisterComponent } from './features/auth/containers/register/register.component';
+import { ReservationComponent } from './reservation/reservation.component';
 
 const routes: Routes = [
   
@@ -27,6 +28,9 @@ component: ContactComponent,
 {
 path: "login",
 component: LoginComponent,
+},
+{path: "Reservation",
+component: ReservationComponent,
 }
 
 ];
