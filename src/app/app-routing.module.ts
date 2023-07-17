@@ -9,6 +9,8 @@ import { LoginComponent } from './features/auth/containers/login/login.component
 import { RegisterComponent } from './features/auth/containers/register/register.component';
 import { AuthModule } from './features/auth/auth.module';
 import { TicketsComponent } from './features/tickets/tickets.component';
+import { ReservationComponent } from './reservation/reservation.component';
+
 
 const routes: Routes = [
   
@@ -37,6 +39,9 @@ component: RegisterComponent,
 {
   path: "Ticket",
   component: TicketsComponent,
+},
+{path: "Reservation",
+component: ReservationComponent,
 }
 
 
