@@ -1,0 +1,17 @@
+<p>list-events works!</p>
+    <div class="event-list">
+        <div class="event-item" *ngFor="let event of listEvent">
+          <div class="event-details">
+            <h3>{{ event.nameEvent }}</h3>
+            <p>Catégorie: {{ event.eventCategory }}</p>
+            <p>Type: {{ event.typeEvent }}</p>
+            <p>Localisation: {{ event.localisation }}</p>
+            <p>Description: {{ event.description }}</p>
+            <p>Nombre maximum: {{ event.nbrMax }}</p>
+            <p>Date de début: {{ event.startDateEvent }}</p>
+            <p>Date de fin: {{ event.endDate }}</p>
+            <p>Statut: {{ event.statut }}</p>
+            <button type="button" class="btn btn-secondary">Delete</button>
+        </div>
+        </div>
+      </div>

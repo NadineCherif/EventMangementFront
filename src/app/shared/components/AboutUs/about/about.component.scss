@@ -96,15 +96,15 @@ section .leftBox {
     left floating section */
 section .leftBox .content {
     color: #fff;
-    background: rgba(246, 241, 241, 0.5);
+    background: #71D0C5;
     padding: 40px;
     transition: .5s;
 }
 /* Styling the hover effect 
-    of left floating section */
+    of left floating section 
 section .leftBox .content:hover {
     background:#71D0C5 // #e91e63;
-}
+}*/
 /* Styling the header of left
     floating section */
 section .leftBox .content h1 {
@@ -141,7 +141,6 @@ section .events ul {
 /* Styling the lists of the event section */
 section .events ul li {
     list-style: none;
-    background: #fff;
     box-sizing: border-box;
     height: 200px;
     margin: 15px 0;
@@ -159,10 +158,10 @@ section .events ul li .time {
   transition: .5s;
 }
 /* Styling the hover effect
-    of events section */
+    of events section 
 section .events ul li:hover .time {
     background: #D0E3AB;
-}
+}*/
 /* Styling the header of time
     class of events section */
 section .events ul li .time h2 {
@@ -206,10 +205,10 @@ section .events ul li .details p {
     position: relative;
     margin: 10px 0 0;
     padding: 0;
-    font-size: 16px;
+    font-size: 15px;
 }
 /* Styling the links of details
-class of events section */
+class of events section 
 section .events ul li .details a {
     display: inline-block;
     text-decoration: none;
@@ -218,10 +217,10 @@ section .events ul li .details a {
     margin-top: 8px;
     font-size: 18px;
     transition: .5s;
-}
-/* Styling the details class's hover effect */
+}*/
+/* Styling the details class's hover effect 
 section .events ul li .details a:hover {
     background: #D0E3AB;
     color: #fff;
     border-color: #D0E3AB;
-}
+}*/
