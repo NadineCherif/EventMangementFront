@@ -4,6 +4,7 @@ import { AuthRouting } from './auth-routing';
 import { LoginComponent } from './containers/login/login.component';
 import { RegisterComponent } from './containers/register/register.component';
 import { AppRoutingModule } from 'src/app/app-routing.module';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -16,6 +17,8 @@ import { AppRoutingModule } from 'src/app/app-routing.module';
     CommonModule,
     AuthRouting,
     AppRoutingModule,
+    FormsModule,
+    FormsModule
   ]
 })
 export class AuthModule { }

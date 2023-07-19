@@ -4,6 +4,7 @@ import { LoginComponent } from './containers/login/login.component';
 import { RegisterComponent } from './containers/register/register.component';
 import { EventPageComponent } from '../event/containers/event-page/event-page.component';
 
+
 const routes: Routes = [
   {
     path: "auth",
@@ -31,6 +32,7 @@ const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
+ 
   exports: [RouterModule]
 })
 export class AuthRouting { }

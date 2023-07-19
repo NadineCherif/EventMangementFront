@@ -1,59 +1,164 @@
-<body>
-  <form>
-    <div class="container">
-      <h1> Student Registeration Form</h1>
-      <hr>
-      <label> Firstname </label>
-      <input type="text" name="firstname" placeholder="Firstname" size="15" required />
-      <label> Middlename: </label>
-      <input type="text" name="middlename" placeholder="Middlename" size="15" required />
-      <label> Lastname: </label>
-      <input type="text" name="lastname" placeholder="Lastname" size="15" required />
-      <div>
-        <label>
-          Course :
-        </label>
+<!-- Section: Design Block -->
+<section class="text-center text-lg-start">
+  <style>
+    .cascading-right {
+      margin-right: -50px;
+    }
+
+    @media (max-width: 991.98px) {
+      .cascading-right {
+        margin-right: 0;
+      }
+    }
+  </style>
+
+  <!-- Jumbotron -->
   
-        <select>
-          <option value="Course">Course</option>
-          <option value="BCA">BCA</option>
-          <option value="BBA">BBA</option>
-          <option value="B.Tech">B.Tech</option>
-          <option value="MBA">MBA</option>
-          <option value="MCA">MCA</option>
-          <option value="M.Tech">M.Tech</option>
-        </select>
+  <div class="container py-4">
+    <div class="row g-0 align-items-center">
+      <div class="col-lg-6 mb-5 mb-lg-0">
+        <div class="card cascading-right" style="
+            background: hsla(0, 0%, 100%, 0.55);
+            backdrop-filter: blur(30px);
+            ">
+          <div class="card-body p-5 shadow-5 text-center">
+            <h2 class="fw-bold mb-5">Sign up now</h2>
+            <form (ngSubmit)="register()" >
+   <div class="row">
+   <div class="col-md-6 mb-4">       
+   <!-- firstname input -->
+   <div class="form-outline mb-4">
+    <input type="text" id="firstname" class="form-control" [(ngModel)]="user.firstname" #firstname="ngModel"  placeholder="First name"  name="firstname" required minlength="3" />  
+    <div *ngIf="firstname.invalid && firstname.touched">
+      <div  *ngIf="firstname.errors?.['required']" style="color: red;">
+          *firstname is required
       </div>
-      <div>
-        <label>
-          Gender :
-        </label><br>
-        <input type="radio" value="Male" name="gender" checked> Male
-        <input type="radio" value="Female" name="gender"> Female
-        <input type="radio" value="Other" name="gender"> Other
-  
+      <div *ngIf="firstname.errors?.['minlength']" style="color: red;">
+          *firstname must have at least 3 caracters
       </div>
-      <label>
-        Phone :
-      </label>
-      <input type="text" name="country code" placeholder="Country Code" value="+91" size="2" />
-      <input type="text" name="phone" placeholder="phone no." size="10" required>
-      Current Address :
-      <textarea cols="80" rows="5" placeholder="Current Address" value="address" required>
-  </textarea>
-      <label for="email"><b>Email</b></label>
-      <input type="text" placeholder="Enter Email" name="email" required>
-  
-      <label for="psw"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="psw" required>
-  
-      <label for="psw-repeat"><b>Re-type Password</b></label>
-      <input type="password" placeholder="Retype Password" name="psw-repeat" required>
-      <button type="submit" class="registerbtn">Register</button>
+  </div>  
+  </div>
+   </div>
+  <div class="col-md-6 mb-4">  
+   <!-- lastname input -->
+   <div class="form-outline mb-4">
+    <input type="text" id="lastname"name="lastname" class="form-control" [(ngModel)]="user.lastname" #lastname="ngModel"  placeholder="Last name" required minlength="3" />    
+    <div *ngIf="lastname.invalid && lastname.touched">
+      <div  *ngIf="lastname.errors?.['required']" style="color: red;">
+          *lastname is required
+      </div>
+      <div *ngIf="lastname.errors?.['minlength']" style="color: red;">
+          *lastname must have at least 3 caracters
+      </div>
+  </div> 
+  </div>
+</div>
+</div>
 
-
-
-
+ 
+<div class="row">
+   <!-- phone number input -->
+    <div class="col-md-6 mb-4">    
+      <div class="form-outline mb-4">
+        <input type="test" id="number"name="phoneNumber" class="form-control" [(ngModel)]="user.phoneNumber" #poneNumber="ngModel" placeholder="Phone number" required minlength="8"  />    
+        <div *ngIf="poneNumber.invalid && poneNumber.touched">
+          <div  *ngIf="poneNumber.errors?.['required']" style="color: red;">
+              *poneNumber is required
+          </div>
+          <div *ngIf="poneNumber.errors?.['minlength']" style="color: red;">
+            *invalid phone number
+        </div>
+        
+      </div> 
+      </div>
+      </div>
+       <!-- role input -->
+ <!-- <div class="col-md-6 mb-4">    
+    <div class="form-outline mb-4">
+      <input type="combobox" id="role" class="form-control"  placeholder="Role" />
+     
     </div>
-  </form>
-</body>
+</div>-->
+<div class="col-md-6 mb-4">    
+  <div class="form-outline mb-4">
+<select class="form-select"name="role" id="inputGroupSelect01"[(ngModel)]="user.role" #role="ngModel" required aria-placeholder="choose your role">
+  <div  *ngIf="role.errors?.['required']" style="color: red;">
+    *role is required
+</div>
+<option value="" disabled selected>choose your role</option>
+  <option selected value="Participant">Participant</option>  
+  <option value="Organisation">Organisation</option>
+  <option value="Sponsor">Sponsor </option>
+  <option value="Association"> Association </option>
+  <option value="Client"> Client</option>
+ 
+</select>
+</div>
+</div>
+</div>
+
+              <!-- Email input -->
+              <div class="form-outline mb-4">
+                <input type="email" id="form3Example3" name="email" class="form-control"[(ngModel)]="user.email"  placeholder="Email Address" #email="ngModel" pattern="[a-zA-Z][a-zA-Z0-9.*+]*@[a-zA-Z]+\.[a-zA-Z]{2,4}" required />
+                <div *ngIf="email.invalid && email.touched">
+                  <div *ngIf="email.errors?.['pattern']" style="color: red;">
+                  Email invalid!
+                  </div>
+              </div>
+              </div>
+
+              <!-- Password input -->
+              <div class="form-outline mb-4">
+                <input type="password" id="form3Example4" name="password" class="form-control"[(ngModel)]="user.password"  placeholder="Password"#password="ngModel" required minlength="5"/>
+                <div *ngIf="password.invalid && password.touched">
+                  <div  *ngIf="password.errors?.['required']" style="color: red;">
+                      *password is required
+                  </div>
+                  <div *ngIf="password.errors?.['minlength']" style="color: red;">
+                      *password must have at least 5 caracters
+                  </div>
+              </div>
+              </div>
+
+           
+
+              <!-- Submit button -->
+              <button type="submit" class="btn btn-primary btn-block mb-4"  >
+                Sign in
+              </button>
+           
+
+              <!-- Register buttons -->
+              <div class="text-center">
+                <p>or sign up with:</p>
+                <button type="button" class="btn btn-link btn-floating mx-1">
+                  <i class="fab fa-facebook-f"></i>
+                </button>
+
+                <button type="button" class="btn btn-link btn-floating mx-1">
+                  <i class="fab fa-google"></i>
+                </button>
+
+                <button type="button" class="btn btn-link btn-floating mx-1">
+                  <i class="fab fa-twitter"></i>
+                </button>
+
+                <button type="button" class="btn btn-link btn-floating mx-1">
+                  <i class="fab fa-github"></i>
+                </button>
+
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6 mb-5 mb-lg-0">
+        <img src="https://images.unsplash.com/photo-1519750157634-b6d493a0f77c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" class="w-100 rounded-4 shadow-4"
+          alt="" />
+      </div>
+    </div>
+  </div>
+  <!-- Jumbotron -->
+</section>
+<!-- Section: Design Block -->

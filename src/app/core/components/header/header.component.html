@@ -31,20 +31,17 @@
               <li class="nav-item">
                 <a class="btn btn-hover" [routerLink]="['login']" routerLinkActive="link-active"><i class="fa fa-fw fa-user"></i> Login</a>
               </li>
+
               <li class="nav-item">
                 <a class="btn btn-hover" [routerLink]="['Ticket']" routerLinkActive="link-active"><i class="fa fa-fw fa-ticket"></i> Get your Ticket!</a>
               </li>
-
           </ul>
+                  
+      </div>
+      <button [routerLink]="['Reservation']" class="btn btn-primary">
+        <i style="font-size: 25px;" class="fa-regular fa-cart-plus"></i>
+        <div style="font-size: 10px;" class="badge bg-danger">5</div>
+      </button>
 
-        </div>
-        <button routerLink="cart" class="btn btn-primary">
-            <i style="font-size: 30px;" class="fa fa-cart-plus"></i>
-            <div style="font-size: 10px;" class="badge bg-danger"></div>
-        </button>
-    
-
-
-      
   </nav>
 </section>
