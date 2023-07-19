@@ -4,6 +4,11 @@ import { HomePageComponent } from './components/Home/home-page/home-page.compone
 import { AboutComponent } from './components/AboutUs/about/about.component';
 import { SponsorsComponent } from './components/Sponsors/sponsors/sponsors.component';
 import { ContactComponent } from './components/ContactUs/contact/contact.component';
+import { FormsModule } from '@angular/forms';
+import { PopComponent } from './components/pop/pop/pop.component';
+import { ExpensesDetailsComponent } from '../features/expenses-details/containers/expenses-details/expenses-details.component';
+import { RouterModule } from '@angular/router';
+import { FinancialReportsComponent } from '../features/financial-reports/containers/financial-reports/financial-reports.component';
 
 
 
@@ -12,10 +17,17 @@ import { ContactComponent } from './components/ContactUs/contact/contact.compone
     HomePageComponent,
     AboutComponent,
     SponsorsComponent,
-    ContactComponent
-  ],
+    ContactComponent,
+    PopComponent,
+    ExpensesDetailsComponent,
+    FinancialReportsComponent
+    
+    
+ ],
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule,
+    RouterModule,
   ]
 })
 export class SharedModule { }

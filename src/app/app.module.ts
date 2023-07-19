@@ -10,12 +10,16 @@ import { CoreModule } from './core/core.module';
 import {TokenInterceptor} from "./core/interceptors/token.interceptor";
 import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
 import { IonicModule } from '@ionic/angular';
+import { ExpensesDetailsModule } from './features/expenses-details/expenses-details.module';
+import { FinancialReportsModule } from './features/financial-reports/financial-reports.module';
+
 
 @NgModule({
   declarations: [
     AppComponent
+  
   ],
-  imports: [
+  imports: [ 
     BrowserModule,
     HttpClientModule,
     CoreModule,
@@ -23,6 +27,8 @@ import { IonicModule } from '@ionic/angular';
     AuthModule,
     EventModule,
     ReservationModule,
+    ExpensesDetailsModule,
+    FinancialReportsModule ,
     IonicModule.forRoot(),
   ],
   providers: [

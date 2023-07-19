@@ -1,0 +1,42 @@
+<h2>Modifier le rapport</h2>
+<span class="value">{{ report.ReportId }}</span>
+<!-- Reste du contenu du template -->
+
+<form (submit)="updateReport()" #reportForm="ngForm">
+  <div class="form-group">
+    <label for="title">Titre :</label>
+    <input type="text" id="title" name="title" [(ngModel)]="report.title" class="form-control" required>
+  </div>
+
+  <div class="form-group">
+    <label for="description">Description :</label>
+    <textarea id="description" name="description" [(ngModel)]="report.description" class="form-control" rows="4" required></textarea>
+  </div>
+
+  <div class="form-group">
+    <label for="startDate">Date de début :</label>
+    <input type="date" id="startDate" name="startDate" [(ngModel)]="report.startDate" class="form-control" required>
+  </div>
+
+  <div class="form-group">
+    <label for="endDate">Date de fin :</label>
+    <input type="date" id="endDate" name="endDate" [(ngModel)]="report.endDate" class="form-control" required>
+  </div>
+
+  <div class="form-group">
+    <label for="totalRevenue">Revenu total :</label>
+    <input type="number" id="totalRevenue" name="totalRevenue" [(ngModel)]="report.totalRevenue" class="form-control" required>
+  </div>
+
+  <div class="form-group">
+    <label for="totalExpenses">Dépenses totales :</label>
+    <input type="number" id="totalExpenses" name="totalExpenses" [(ngModel)]="report.totalExpenses" class="form-control" required>
+  </div>
+
+  <div class="form-group">
+    <label for="netIncome">Revenu net :</label>
+    <input type="number" id="netIncome" name="netIncome" [(ngModel)]="report.netIncome" class="form-control" required>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Mettre à jour</button>
+</form>

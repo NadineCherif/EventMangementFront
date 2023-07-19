@@ -1,0 +1,37 @@
+<body>
+<div class="table-container">
+    <h2 class="text-center">Liste des rapports</h2>
+    <div class="table-responsive">
+      <table class="table table-bordered table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th>ID</th>
+            <th>Titre</th>
+            <th>Description</th>
+            <th>Date de début</th>
+            <th>Date de fin</th>
+            <th>Revenu total</th>
+            <th>Dépenses totales</th>
+            <th>Revenu net</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let report of reports" >
+            <td>{{ report.title }}</td>
+            <td>{{ report.description }}</td>
+            <td>{{ report.startDate | date }}</td>
+            <td>{{ report.endDate | date }}</td>
+            <td>{{ report.totalRevenue }}</td>
+            <td>{{ report.totalExpenses }}</td>
+            <td>{{ report.netIncome }}</td>
+            <td>
+                <button class="btn btn-primary btn-sm" (click)="updateReport(report)"[routerLink]="['/edit', report.ReportId]">Edit</button>
+                <button class="btn btn-primary btn-danger" (click)="deleteFinancialReport(report.ReportId)">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>

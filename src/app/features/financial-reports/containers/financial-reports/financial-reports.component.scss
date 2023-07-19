@@ -1,0 +1,43 @@
+/* Appliquer un style de conteneur */
+form {
+    width: 400px;
+    margin: 0 auto;
+  }
+  
+  /* Appliquer un espacement entre les éléments */
+  div {
+    margin-bottom: 10px;
+  }
+  
+  /* Appliquer un style aux étiquettes */
+  label {
+    display: block;
+    font-weight: bold;
+  }
+  
+  /* Appliquer un style aux champs de saisie */
+  input[type="text"],
+  textarea,
+  input[type="date"],
+  input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  /* Appliquer un style au bouton */
+  button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  

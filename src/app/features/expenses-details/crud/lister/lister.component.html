@@ -1,0 +1,36 @@
+<br>
+<br>
+<br>
+<div class="container">
+    <div class="card">
+        <div class="card_header">
+            <h3>Les Rapports </h3>
+        </div>
+        <div class="card-body">
+            <table class ="table table-hover">
+              <thead>
+                <tr>
+                <th>ExpensesDetailId</th>
+                <th>ExpensesDetailType</th>
+                <th>amount</th>
+                <th>date</th>
+                <th>description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor ="let expensesDetails of expensesDetail" class="text-center">
+                    <td>{{expensesDetails.ExpensesDetailId}}</td>
+                    <td>{{expensesDetails.ExpensesDetailType}}</td>
+                    <td>{{expensesDetails.amount}}</td>
+                    <td>{{expensesDetails.date}}</td>
+                    <td>{{expensesDetails.description}}</td>
+
+                    <td>
+                        <button class= "btn btn-warning">Editer</button>
+                        <button (click)= "Delete(expensesDetails)" class="btn btn-danger" style="margin-left: 10px;">delete</button>
+                    </td>
+              </tbody>
+            </table>   
+        </div>
+    </div>
+</div>
