@@ -10,7 +10,9 @@ export class OpenService {
   constructor(private handler$: HttpBackend) {
     this._openHttpClient = new HttpClient(handler$);
   }
-
+  addEvent(){
+  
+  }
   getEvent(id: string){
     return this._openHttpClient.get('http:localhost:8088/EventManagement/Event/retrieve-all-Events');
   }

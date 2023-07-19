@@ -1,3 +1,205 @@
 <app-header></app-header>
 <router-outlet></router-outlet>
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
 
+</head>
+
+  <section id="nav-bar">
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container">
+  
+        <a class="navbar-brand" [routerLink]="['Home']" routerLinkActive="link-active">Evento</a>
+  
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fa fa-bars"></i>
+        </button>
+  
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link"  [routerLink]="['Home']" routerLinkActive="link-active"><i class="fa fa-fw fa-home"></i> Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" [routerLink]="['About']" routerLinkActive="link-active"><i class="fa fa-fw fa-info"></i> About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" [routerLink]="['Events']" routerLinkActive="link-active"><i class="fa fa-fw fa-calendar"></i> Events</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" [routerLink]="['/auth/register']" routerLinkActive="link-active"><i class="fa fa-fw fa-registered"></i> Register</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" [routerLink]="['Sponsors']" routerLinkActive="link-active"><i class="fa fa-fw fa-flag"></i> Sponsors</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" [routerLink]="['Contact']" routerLinkActive="link-active"><i class="fa fa-fw fa-envelope"></i> Contact Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="btn btn-hover" [routerLink]="['/auth/login']" routerLinkActive="link-active"><i class="fa fa-fw fa-user"></i> Login</a>
+            </li>
+            <li class="nav-item">
+              <a class="btn btn-hover" [routerLink]="['Ticket']" routerLinkActive="link-active"><i class="fa fa-fw fa-user"></i> Get your Ticket!</a>
+            </li>
+          </ul>
+          <span class="fas fa-search search-icon"><i class="fa fa-fw fa-search"></i></span>
+        </div>
+
+      </div>
+    </nav>
+  </section>
+  
+
+
+  
+  <section id="home-section">
+    <div class="container">
+      <div class="intro">
+        <h1>The events</h1>
+        <span>The Events est l'endroit où vous pouvez découvrir les événements à venir et participer à des activités passionnantes. 
+          Vous trouverez ici une liste complète des événements organisés.</span>
+        <span>Rejoignez-nous dans la section "Événements" et plongez dans un monde d'opportunités et de divertissement captivants.</span>
+        <br>
+  
+        <button class="btn" [routerLink]="['/Events']" routerLinkActive="link-active">Seek your Events</button>
+        <br>
+        <button class="btn" [routerLink]="['/login']" routerLinkActive="link-active">Organize your Events</button>  
+      </div>
+    </div>
+  </section>
+  
+
+
+<section class="about-section">
+    <div class="left-box">
+      <div class="content">
+        <h1>Events and Shows</h1>
+        <p>
+          With the idea of imparting programming knowledge, Mr. Sandeep Jain, an IIT Roorkee alumnus started a dream, GeeksforGeeks. Whether programming excites you or you feel stifled, wondering how to prepare for interview questions or how to ace data structures and algorithms, GeeksforGeeks is a one-stop solution. With every tick of time, we are adding arrows in our quiver. From articles on various computer science subjects to programming problems for practice, from basic to premium courses, from technologies to entrance examinations, we have been building ample content with superior quality. In a short span, we have built a community of 1 Million+ Geeks around the world, 20,000+ Contributors and 500+ Campus Ambassadors in various colleges across the nation. Our success stories include a lot of students who benefitted in their placements and landed jobs at tech giants. Our vision is to build a gigantic network of geeks and we are only a fraction of it yet.
+        </p>
+      </div>
+    </div>
+    <div class="events">
+      <ul>
+        <li>
+          <div class="time">
+            <h2>15<br><span>March</span></h2>
+          </div>
+          <div class="details">
+            <h3>Where is the event happening?</h3>
+            <p>
+              With the idea of imparting programming knowledge, Mr. Sandeep Jain, an IIT Roorkee alumnus started a dream, GeeksforGeeks. Whether programming excites you or you feel stifled, how to ace data structures and algorithms, GeeksforGeeks is a one-stop solution.
+            </p>
+          </div>
+          <div class="clearfix"></div>
+        </li>
+        <li>
+          <div class="time">
+            <h2>27<br><span>May</span></h2>
+          </div>
+          <div class="details">
+            <h3>Where is the event happening?</h3>
+            <p>
+              With the idea of imparting programming knowledge, Mr. Sandeep Jain, an IIT Roorkee alumnus started a dream, GeeksforGeeks. Whether programming excites you or you feel stifled, how to ace data structures and algorithms, GeeksforGeeks is a one-stop solution.
+            </p>
+          </div>
+          <div class="clearfix"></div>
+        </li>
+        <li>
+          <div class="time">
+            <h2>12<br><span>August</span></h2>
+          </div>
+          <div class="details">
+            <h3>Where is the event happening?</h3>
+            <p>
+              With the idea of imparting programming knowledge, Mr. Sandeep Jain, an IIT Roorkee alumnus started a dream, GeeksforGeeks. Whether programming excites you or you feel stifled, how to ace data structures and algorithms, GeeksforGeeks is a one-stop solution.
+            </p>
+          </div>
+          <div class="clearfix"></div>
+        </li>
+      </ul>
+    </div>
+  </section>
+    <form class="event-form" >
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="nameEvent">Nom de l'événement</label>
+            <input type="text" class="form-control" id="nameEvent" name="nameEvent" required>
+          </div>
+          <div class="form-group col-md-6">
+            <label for="eventCategory">Catégorie de l'événement</label>
+            <select class="form-control" id="eventCategory" name="eventCategory" required>
+              <option value="CATEGORIE_1">Catégorie 1</option>
+              <option value="CATEGORIE_2">Catégorie 2</option>
+            </select>
+          </div>
+        </div>
+      
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="typeEvent">Type d'événement</label>
+            <select class="form-control" id="typeEvent"  name="typeEvent" required>
+              <option value="TYPE_1">Type 1</option>
+              <option value="TYPE_2">Type 2</option>
+            </select>
+          </div>
+          <div class="form-group col-md-6">
+            <label for="localisation">Localisation</label>
+            <input type="text" class="form-control" id="localisation" name="localisation" required>
+          </div>
+        </div>
+      
+        <div class="form-group">
+          <label for="description">Description</label>
+          <textarea class="form-control" id="description"  name="description" required></textarea>
+        </div>
+      
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="nbrMax">Nombre maximum</label>
+            <input type="number" class="form-control" id="nbrMax"  name="nbrMax" required>
+          </div>
+          <div class="form-group col-md-6">
+            <label for="startDateEvent">Date de début</label>
+            <input type="date" class="form-control" id="startDateEvent"  name="startDateEvent" required>
+          </div>
+        </div>
+      
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="endDate">Date de fin</label>
+            <input type="date" class="form-control" id="endDate"  name="endDate" required>
+          </div>
+          <div class="form-group col-md-6">
+            <label for="statut">Statut</label>
+            <select class="form-control" id="statut"  name="statut" required>
+              <option value="STATUT_1">Statut 1</option>
+              <option value="STATUT_2">Statut 2</option>
+            </select>
+          </div>
+        </div>
+        <button type="submit" class="btn">Enregistrer</button>
+        </form>
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    -->
