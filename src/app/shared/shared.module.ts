@@ -21,6 +21,8 @@ import { TicketsComponent } from './components/tickets/tickets.component';
     SponsorsComponent,
     ContactComponent,
 
+
+
     TicketsComponent
   ],
   imports: [

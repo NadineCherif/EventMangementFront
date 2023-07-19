@@ -14,4 +14,6 @@ import {AdminRouting} from "./admin-routing";
     AdminRouting
   ]
 })
-export class AdminModule { }
+export class AdminModule { 
+  //cmnt
+}
