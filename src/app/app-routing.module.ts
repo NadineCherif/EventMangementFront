@@ -31,6 +31,11 @@ path: "login",
 component: LoginComponent,
 },
 {
+  path: "register",
+  component: RegisterComponent,
+},
+
+{
   path: "Ticket",
   component: TicketsComponent,
 }

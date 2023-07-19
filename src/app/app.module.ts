@@ -17,7 +17,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TicketsComponent } from './shared/components/tickets/tickets.component';
 
 import { EventPageComponent } from './features/event/containers/event-page/event-page.component';
-import { LoginComponent } from './features/auth/containers/login/login.component';
 import { AuthRouting } from './features/auth/auth-routing';
 
 @NgModule({

@@ -20,7 +20,6 @@ import { TicketsComponent } from './components/tickets/tickets.component';
     AboutComponent,
     SponsorsComponent,
     ContactComponent,
-    LoginComponent,
     TicketsComponent
   ],
   imports: [
