@@ -19,10 +19,12 @@ import { EventPageComponent } from './features/event/containers/event-page/event
 import { LoginComponent } from './features/auth/containers/login/login.component';
 import { AuthRouting } from './features/auth/auth-routing';
 import { FormsModule } from '@angular/forms';
+import { FactureComponent } from './Features/facture/facture/facture.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    FactureComponent,
     
 
   ],
