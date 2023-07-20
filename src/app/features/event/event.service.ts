@@ -31,4 +31,9 @@ export class EventService {
   deleteEvent(){
     return this._openHttpClient.delete('http://localhost:8088/EventManagement/Event/delete');
   }
+
+  /*getEventNameById(eventId: number): Observable<any> {
+    const url = `${this.backendUrl}/getName/${eventId}`;
+    return this.http.get<any>(url);
+  }*/
 }

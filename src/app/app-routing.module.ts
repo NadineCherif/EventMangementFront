@@ -9,8 +9,7 @@ import { LoginComponent } from './features/auth/containers/login/login.component
 import { RegisterComponent } from './features/auth/containers/register/register.component';
 import { AuthModule } from './features/auth/auth.module';
 import { TicketsComponent } from './features/tickets/tickets.component';
-import { ReservationComponent } from './reservation/reservation.component';
-
+import { ReservationComponent } from './features/reservation/reservation.component';
 
 const routes: Routes = [
   
