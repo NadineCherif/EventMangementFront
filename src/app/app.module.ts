@@ -17,6 +17,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { EventPageComponent } from './features/event/containers/event-page/event-page.component';
 import { AuthRouting } from './features/auth/auth-routing';
+import { ReservationModule } from './features/reservation/reservation-module';
 
 
 @NgModule({
@@ -32,7 +33,8 @@ import { AuthRouting } from './features/auth/auth-routing';
     EventModule,
     IonicModule.forRoot(),
     BrowserAnimationsModule,
-    FormsModule
+    FormsModule,
+    ReservationModule
    
   ],
   providers: [
