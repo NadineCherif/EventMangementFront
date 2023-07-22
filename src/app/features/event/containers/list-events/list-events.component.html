@@ -1,18 +1,48 @@
-<p>list-events works!</p>
-    <div class="event-list">
-        <div class="event-item" *ngFor="let event of listEvent">
-          <div class="event-details">
-            <h3>{{ event.nameEvent }}</h3>
-            <p>Catégorie: {{ event.eventCategory }}</p>
-            <p>Type: {{ event.typeEvent }}</p>
-            <p>Localisation: {{ event.localisation }}</p>
-            <p>Description: {{ event.description }}</p>
-            <p>Nombre maximum: {{ event.nbrMax }}</p>
-            <p>Date de début: {{ event.startDateEvent }}</p>
-            <p>Date de fin: {{ event.endDate }}</p>
-            <p>Statut: {{ event.statut }}</p>
-            <button type="button" class="btn btn-secondary">Delete</button>
-            <button type="button" class="btn btn-light" (click)="onReserve(event)">Réservez</button>
+
+<body>
+  <p>list-events works!</p>  
+  <div>
+    <label for="searchCategorieInput">Rechercher par Category:</label>
+    <input type="text" id="searchCategorieInput" [(ngModel)]="searchCategorie">
+    <button (click)="searchEventsCategory()">Rechercher</button>
+  </div> 
+  
+  <div>
+    <label for="searchNameInput">Rechercher par nom:</label>
+    <input type="text" id="searchNameInput" [(ngModel)]="searchName">
+    <button (click)="searchEvents2()">Rechercher</button>
+  </div> 
+  
+  
+  <form (ngSubmit)="searchEvents()">
+    <label>Date de début:</label>
+    <input type="date" [(ngModel)]="startDate" name="startDate">
+  
+    <label>Date de fin:</label>
+    <input type="date" [(ngModel)]="endDate" name="endDate">
+  
+    <button type="submit">Rechercher</button>
+  </form>
+  
+      <div class="event-list">
+          <div class="event-item" *ngFor="let event of listEvent">
+            <div class="event-details">
+              <h3>{{ event.nameEvent }}</h3>
+              <p>Catégorie: {{ event.eventCategory }}</p>
+              <p>Type: {{ event.typeEvent }}</p>
+              <div [ngClass]="{'hidden':event.typeEvent=='event_private'}">
+              <p>Localisation: {{ event.localisation }}</p>
+              <p>Description: {{ event.description }}</p>
+              <p>Nombre maximum: {{ event.nbrMax }}</p>
+              <p>Date de début: {{ event.startDateEvent }}</p>
+              <p>Date de fin: {{ event.endDate }}</p>
+              <p>Statut: {{ event.statut }}</p></div>
+              <button type="button" class="btn btn-secondary">Delete</button>  
+              <button type="button" class="btn btn-light" (click)="onReserve(event)">Réservez</button>
+          </div>
+          </div>
         </div>
-        </div>
-      </div>
+      </body>
+
+
+

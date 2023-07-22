@@ -17,6 +17,10 @@ showMessage : boolean = false;
 id!:number;
 listevent:Evenement[]=[];
 message : string = "";
+startDate: any;
+endDate: any;
+searchName: any;
+searchCategorie : any ;
 ngOnInit(){
 console.log("salem");
 this.eventService.getEvents().subscribe(d => {this.listEvent = d;
@@ -45,6 +49,27 @@ this.eventService.deleteEvent().subscribe(e => {this.listEvent =e;
         console.error("Erreur lors de l'ajout de reservation ", error);
       }
     );*/
+    
+    
+searchEvents() {
+  console.log("hiii");
+  this.eventService.searchEventsByDate(this.startDate, this.endDate).subscribe(events => {
+    this.listEvent = events;
+  });
+}
+searchEvents2() {
+  console.log(this.searchName); 
+  this.eventService.searchEventsByName(this.searchName).subscribe(events => {
+    this.listEvent = events;
+  });
+}
+
+searchEventsCategory() {
+  console.log("categ");
+  this.eventService.searchEventsByCategorie(this.searchCategorie).subscribe(d => {this.listEvent = d;
+    console.log(this.listEvent);
+  });
+}
     
   onReserve(event: Evenement) {
     console.log("nadine") ;

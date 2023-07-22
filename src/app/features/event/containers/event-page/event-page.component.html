@@ -1,70 +1,90 @@
 <body>
-<form class="event-form" >
-    <div class="form-row">
-      <div class="form-group col-md-6">
-        <label for="nameEvent">Nom de l'événement</label>
-        <input type="text" class="form-control" id="nameEvent" name="nameEvent" [(ngModel)]="event.nameEvent" required>
+  <form class="event-form" >
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="nameEvent">Nom de l'événement</label>
+          <input type="text" class="form-control" id="nameEvent" name="nameEvent" [(ngModel)]="event.nameEvent" required touched>
+          <!-- Message pour le champ obligatoire -->
+          <div *ngIf="!event.nameEvent" class="error-message">Le champ est obligatoire.</div>
+        </div>
+        <div class="form-group col-md-6">
+          <label for="eventCategory">Catégorie de l'événement</label>
+          <select class="form-control" id="eventCategory" name="eventCategory" [(ngModel)]="event.eventCategory" required>
+            <option value="Fromation">Fromation</option>
+            <option value="Céremonie">Céremonie</option>
+            <option value="Team_Building">Team_Building</option>
+            <option value="Congrés">Congrés</option>
+            <option value="Séminaire">Séminaire</option>
+            <option value="Lancemement_Produit">Lancemement_Produit</option>
+            <option value="Mariage">Mariage</option>
+            <option value="Anniversaire">Anniversaire</option>
+            
+          </select>
+        </div>
       </div>
-      <div class="form-group col-md-6">
-        <label for="eventCategory">Catégorie de l'événement</label>
-        <select class="form-control" id="eventCategory" name="eventCategory" [(ngModel)]="event.eventCategory" required>
-          <option value="Fromation">Fromation</option>
-          <option value="Céremonie">Céremonie</option>
-          <option value="Team_Building">Team_Building</option>
-          <option value="Congrés">Congrés</option>
-          <option value="Séminaire">Séminaire</option>
-          <option value="Lancemement_Produit">Lancemement_Produit</option>
-          <option value="Mariage">Mariage</option>
-          <option value="Anniversaire">Anniversaire</option>
-          
-        </select>
-      </div>
-    </div>
+    
+      <div class="form-row">
+        <!--<div class="form-group col-md-6">
+          <label for="typeEvent">Type d'événement</label>
+          <select class="form-control" id="typeEvent"  name="typeEvent" [(ngModel)]="event.typeEvent" required>
+            <option value="event_public">Publique</option>
+            <option value="event_private">Privée</option>
+          </select>
+        </div>-->
+        <!-- event-form.component.html -->
   
-    <div class="form-row">
-      <div class="form-group col-md-6">
-        <label for="typeEvent">Type d'événement</label>
-        <select class="form-control" id="typeEvent"  name="typeEvent" [(ngModel)]="event.typeEvent" required>
-          <option value="event_public">Publique</option>
-          <option value="event_private">Privée</option>
-        </select>
+  <div class="form-group col-md-6">
+    <label>Type d'événement</label>
+    <div class="event-cards" required >
+      <div class="event-card" [ngClass]="{'selected': event.typeEvent === 'event_public'}" (click)="event.typeEvent = 'event_public'">
+        <h3>Publique</h3>
+        <p>Faites découvrir votre événement au grand public.</p>
       </div>
-      <div class="form-group col-md-6">
-        <label for="localisation">Localisation</label>
-        <input type="text" class="form-control" id="localisation" name="localisation" [(ngModel)]="event.localisation" required>
+      <div class="event-card" [ngClass]="{'selected': event.typeEvent === 'event_private'}" (click)="event.typeEvent = 'event_private'">
+        <h3>Privée</h3>
+        <p>Restreindre l'accès à votre événement à des invités spécifiques.</p>
       </div>
     </div>
+  </div>
   
-    <div class="form-group">
-      <label for="description">Description</label>
-      <textarea class="form-control" id="description"  name="description" [(ngModel)]="event.description" required></textarea>
-    </div>
-  
-    <div class="form-row">
-      <div class="form-group col-md-6">
-        <label for="nbrMax">Nombre maximum</label>
-        <input type="number" class="form-control" id="nbrMax"  name="nbrMax"  [(ngModel)]="event.nbrMax" required>
+        <div class="form-group col-md-6">
+          <label for="localisation">Localisation</label>
+          <input type="text" class="form-control" id="localisation" name="localisation" [(ngModel)]="event.localisation" required>
+        </div>
       </div>
-      <div class="form-group col-md-6">
-        <label for="startDateEvent">Date de début</label>
-        <input type="date" class="form-control" id="startDateEvent"  name="startDateEvent" [(ngModel)]="event.startDateEvent" required>
+    
+      <div class="form-group">
+        <label for="description">Description</label>
+        <textarea class="form-control" id="description"  name="description" [(ngModel)]="event.description" required></textarea>
       </div>
-    </div>
-  
-    <div class="form-row">
-      <div class="form-group col-md-6">
-        <label for="endDate">Date de fin</label>
-        <input type="date" class="form-control" id="endDate"  name="endDate" [(ngModel)]="event.endDate" required>
+    
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="nbrMax">Nombre maximum</label>
+          <input type="number" class="form-control" id="nbrMax"  name="nbrMax"  [(ngModel)]="event.nbrMax" required>
+        </div>
+        <div class="form-group col-md-6">
+          <label for="startDateEvent">Date de début</label>
+          <input type="date" class="form-control" id="startDateEvent"  name="startDateEvent" [(ngModel)]="event.startDateEvent" required>
+        </div>
       </div>
-      <div class="form-group col-md-6">
-        <label for="statut">Statut</label>
-        <select class="form-control" id="statut"  name="statut" [(ngModel)]="event.statut" required>
-          <option value="Pending">Pending</option>
-          <option value="Accepted">Accepted</option>
-          <option value="Rejected">Rejected</option>
-        </select>
+    
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="endDate">Date de fin</label>
+          <input type="date" class="form-control" id="endDate"  name="endDate" [(ngModel)]="event.endDate" required>
+        </div>
+        <div class="form-group col-md-6">
+          <label for="statut">Statut</label>
+          <select class="form-control" id="statut"  name="statut" [(ngModel)]="event.statut" required>
+            <option value="Pending">Pending</option>
+            <option value="Accepted">Accepted</option>
+            <option value="Rejected">Rejected</option>
+          </select>
+        </div>
       </div>
-    </div>
-    <button type="submit" class="btn" (click)="addEvent()">Enregistrer</button>
+      <button type="submit" class="btn" (click)="addEvent()">Enregistrer</button>
     </form>
-</body>
+  </body>
+  <!-- event-form.component.html -->
+  

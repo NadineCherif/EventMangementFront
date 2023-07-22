@@ -16,19 +16,29 @@ message : string = "";
 showMessage : boolean = false;
 events : Evenement[] = [] ;
     constructor(private _openService: EventService, private router: Router) {
-    this.getEvent();
+    /*private emailService EmailService) {*/
+   // this.getEvent();
     }
     ngOnInit(): void {
     
       
     }
-
+    /*submitForm() {
+      // Vérifier si le formulaire est valide
+      if (!this.event.nameEvent) {
+        // Gérer le cas où le formulaire n'est pas valide
+        console.log("Veuillez saisir un titre d'événement valide.");
+        return;
+      }
+    }*/
     addEvent() {
       this._openService.addEvent(this.event)
         .subscribe(
           () => {
             this.showMessage = true;
             this.message = "Événement ajouté avec succès";
+            console.log('evenement ajouté avcec succès');
+           // this.sendEmailToAdmin();
             this.getEvent();
           },
           (error: any) => {
@@ -41,14 +51,17 @@ events : Evenement[] = [] ;
       //console.log(this.event)
     }
     
-    
+    /*sendEmailToAdmin(){
+     this.emailService.sendEmailToAdmin(this.event)
+     .then(()=> {
+     console.log('E-mail enoviyé a l\'administrateur avec succès');
+     })
+     .catch((error : any) => {
+     console.error('Erreur lors de l\'envoi de l\'e-mail à l\'administrateur', error);
+     });
+    }*/
 
     getEvent(){
       this._openService.getEvents();
     }
-
-  
-  /*deleteEvent(){
-    this._openService.deleteEvents();
-  }*/
 }

@@ -15,25 +15,39 @@ export class EventService {
   constructor(private http: HttpClient, private handler$: HttpBackend) {
     this._openHttpClient = new HttpClient(handler$);
   }
+  
+  searchEventsByDate(startDate: Date, endDate: Date) {
+    return this._openHttpClient.get('http://localhost:8088/EventManagement/Event/search-by-date/'+startDate+"/"+endDate);
 
-  addEvent(event: Evenement): Observable<any> {
-    return this.http.post<any>(`${this.backendUrl}/add-Event`, event);
   }
-  
-  
+
+  addEvent(event: any): Observable<any> {
+    return this.http.get<any>(`${this.backendUrl}/add-Event`, event);
+  }  
   createEvent(data: any){
     return this.http.post("",data);
   }
 
   getEvents(){
     return this._openHttpClient.get('http://localhost:8088/EventManagement/Event/retrieve-all-Events');
+
   }
   deleteEvent(){
     return this._openHttpClient.delete('http://localhost:8088/EventManagement/Event/delete');
   }
+  
 
-  /*getEventNameById(eventId: number): Observable<any> {
-    const url = `${this.backendUrl}/getName/${eventId}`;
-    return this.http.get<any>(url);
-  }*/
-}
+  searchEventsByName(name: string) {
+    return this._openHttpClient.get('http://localhost:8088/EventManagement/Event/search-by-name/'+name);
+
+  }
+  
+  searchEventsByCategorie(categorie: string) {
+
+    return this._openHttpClient.get('http://localhost:8088/EventManagement/Event/search-by-categorie/'+categorie);
+  }
+  
+  
+  }
+
+
