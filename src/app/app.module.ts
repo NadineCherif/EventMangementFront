@@ -18,11 +18,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { EventPageComponent } from './features/event/containers/event-page/event-page.component';
 import { AuthRouting } from './features/auth/auth-routing';
-
+import { ReservationModule } from './features/reservation/reservation-module';
+//import { FactureModule } from './features/facture/facture.module';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
@@ -34,8 +35,9 @@ import { AuthRouting } from './features/auth/auth-routing';
     AdminModule,
     IonicModule.forRoot(),
     BrowserAnimationsModule,
-    FormsModule
-   
+    FormsModule,
+    ReservationModule,
+    
   ],
   providers: [
     {

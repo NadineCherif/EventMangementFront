@@ -9,9 +9,12 @@ import { LoginComponent } from './features/auth/containers/login/login.component
 import { RegisterComponent } from './features/auth/containers/register/register.component';
 import { AuthModule } from './features/auth/auth.module';
 import { TicketsComponent } from './features/tickets/tickets.component';
-import { ReservationComponent } from './reservation/reservation.component';
+import { ReservationComponent } from './features/reservation/reservation.component';
 import { AuthGuard } from './features/auth/auth.guard';
 import { AdminDashboardComponent } from './features/admin/containers/admin-dashboard/admin-dashboard.component';
+
+
+//import { FacturePageComponent } from './features/facture/container/facture-page/facture-page.component';
 
 
 const routes: Routes = [
@@ -52,6 +55,7 @@ component: RegisterComponent,
 },
 {path: "Reservation",
 component: ReservationComponent,
+
 canActivate: [AuthGuard] 
 }
 ,{
@@ -63,6 +67,10 @@ canActivate: [AuthGuard]
   component:EventPageComponent,
   canActivate: [AuthGuard] 
 },
+
+
+
+
 
 ];
 

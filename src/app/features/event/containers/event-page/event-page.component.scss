@@ -1,6 +1,7 @@
-/*body {
-  background-color: var(--white);
-  color: var(--sonic-silver);
+/* body styles */
+body {
+  background-color: #f2f2f2; /* Couleur de fond */
+  color: #333; /* Couleur du texte principal */
   font-size: 1.6rem;
   line-height: 1.6;
   overflow-x: hidden;
@@ -9,52 +10,55 @@
   scroll-behavior: smooth;
 }
 
-
+/* Styles pour le formulaire d'événement */
 .event-form {
-  margin-top : -90px;
-  padding : 9rem;
+  margin-top: -90px;
+  padding: 5rem; /* Réduire la taille du padding pour un formulaire plus compact */
   margin-inline-start: 120px;
   
+  .form-row {
+    margin-bottom: 20px;
+  }
+
+  label {
+    font-weight: bold;
+  }
+
+  button[type="submit"] {
+    width: 100%;
+    color: white;
+    background-color: #71D0C5;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 25px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Transition fluide lors du survol */
+  }
+
+  button[type="submit"]:hover {
+    background-color: #5CB8AB; /* Couleur de survol pour le bouton */
+  }
 }
 
-.event-form .form-row {
-  margin-bottom: 20px;
-}
-
-.event-form label {
-  font-weight: bold;
-}
-
-.event-form button[type="submit"] {
-  width: 100%;
-  color: white;
-  background-color: #71D0C5;
-
-
-}
-/*button {
-  background-color: #71D0C5;
-  color: #71D0C5;
-  padding: 10px 25px;
-  border: none;
-  border-radius: 5px;
-  font-size: 20px;
-  font-weight: bold;
-  cursor: pointer;
-}*/
+/* Réinitialisation de la boîte de modèle pour tous les éléments */
 * {
-  box-sizing: border-box; 
+  box-sizing: border-box;
 }
+
+/* Styles pour la section d'événements */
 .event-section {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100vh;
-  margin-top : -90px;
-  padding : 9rem;
+  margin-top: -90px;
+  padding: 5rem; /* Réduire la taille du padding pour une section plus compacte */
   margin-inline-start: 120px;
 
+  /* Styles pour la liste d'événements */
   .event-list {
     display: flex;
     flex-direction: column;
@@ -66,12 +70,68 @@
     border-radius: 5px;
     background-color: #f8f8f8;
 
+    /* Styles pour chaque élément de la liste d'événements */
     .event-item {
       margin-bottom: 10px;
       padding: 10px;
       border: 1px solid #ccc;
       border-radius: 3px;
+
+      /* Couleurs vives pour chaque élément de la liste */
+      background-color: #FFC107; /* Jaune */
+      color: #333; /* Couleur du texte pour les éléments */
+    }
+
+    /* Ajouter plus de couleurs vives pour différents éléments si nécessaire */
+    .event-item:nth-child(2n) {
+      background-color: #E91E63; /* Rose */
+      color: #fff;
+    }
+
+    .event-item:nth-child(3n) {
+      background-color: #2196F3; /* Bleu */
+      color: #fff;
     }
   }
+}
+/* event-form.component.scss */
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+/* Styles pour les cartes "Publique" et "Privée" */
+.event-cards {
+  display: flex;
+  justify-content: space-between;
+}
+
+.event-card {
+  flex: 1;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+  margin: 10px;
+  background-color: #ccc;
+}
+
+/* Styles pour les cartes sélectionnées */
+.selected {
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+  border-color: #007bff;
+}
+
+/* Styles pour le titre des cartes */
+.event-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+/* Styles pour le texte des cartes */
+.event-card p {
+  font-size: 1.2rem;
+  color: #777;
 }
 

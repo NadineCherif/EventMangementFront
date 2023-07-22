@@ -1,0 +1,36 @@
+<h1 mat-dialog-title>Add Facture Manually</h1>
+<div mat-dialog-content>
+    <p>Entre data</p>
+
+    <form class="example-form">
+
+        <mat-form-field>
+            <mat-label>Ref Facture</mat-label>
+            <input matInput [(ngModel)]="data.refFacture" #refFacture="ngModel">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Date Facture</mat-label>
+            <input matInput [(ngModel)]="data.dateFacture" #dateFacture="ngModel">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Est Payee</mat-label>
+            <input matInput [(ngModel)]="data.estPayee" #estPayee="ngModel">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Date Paiement</mat-label>
+            <input matInput [(ngModel)]="data.datePaiement" #datePaiement="ngModel">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Montant Paye</mat-label>
+            <input matInput [(ngModel)]="data.montantPaye" #montantPaye="ngModel">
+        </mat-form-field>
+
+    </form>
+</div>
+<div mat-dialog-actions>
+    <button mat-button (click)="onSaveClick()">Save</button>
+</div>
