@@ -10,6 +10,7 @@ import { RegisterComponent } from './features/auth/containers/register/register.
 import { AuthModule } from './features/auth/auth.module';
 import { TicketsComponent } from './features/tickets/tickets.component';
 import { ReservationComponent } from './features/reservation/reservation.component';
+import { FacturePageComponent } from './features/facture/container/facture-page/facture-page.component';
 
 const routes: Routes = [
   
@@ -48,8 +49,11 @@ component: RegisterComponent,
 },
 {path: "Reservation",
 component: ReservationComponent,
+},
+{
+  path: "facture",
+  component: FacturePageComponent,
 }
-
 
 ];
 

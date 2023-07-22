@@ -9,8 +9,6 @@ export class Evenement {
     startDateEvent!: Date;
     endDate!: Date;
     statut!: Statut;
-    
-    
 }
 export enum Statut {
     PENDING = 'PENDING',
