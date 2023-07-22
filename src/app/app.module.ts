@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AuthModule } from './features/auth/auth.module';
+import { AdminModule } from './features/admin/admin.module';
 import { EventModule } from './features/event/event.module';
 import { CoreModule } from './core/core.module';
 import {TokenInterceptor} from "./core/interceptors/token.interceptor";
@@ -30,6 +31,7 @@ import { AuthRouting } from './features/auth/auth-routing';
     AppRoutingModule,
    AuthModule,
     EventModule,
+    AdminModule,
     IonicModule.forRoot(),
     BrowserAnimationsModule,
     FormsModule

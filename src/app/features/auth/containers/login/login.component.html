@@ -14,6 +14,7 @@
 
   <!-- Jumbotron -->
   
+  
   <div class="container py-4">
     <div class="row g-0 align-items-center">
       <div class="col-lg-6 mb-5 mb-lg-0">
@@ -38,7 +39,9 @@
                 
               </div>
 
-           
+              <div *ngIf="errorMessage" class="error-message" style="color:red;">
+                {{ errorMessage }}
+              </div>
 
               <!-- Submit button -->
               <button type="submit" class="btn btn-primary btn-block mb-4" >
@@ -49,25 +52,7 @@
               </div>
 
               <!-- Register buttons -->
-              <div class="text-center">
-                <p>or sign up with:</p>
-                <button type="button" class="btn btn-link btn-floating mx-1">
-                  <i class="fab fa-facebook-f"></i>
-                </button>
-
-                <button type="button" class="btn btn-link btn-floating mx-1">
-                  <i class="fab fa-google"></i>
-                </button>
-
-                <button type="button" class="btn btn-link btn-floating mx-1">
-                  <i class="fab fa-twitter"></i>
-                </button>
-
-                <button type="button" class="btn btn-link btn-floating mx-1">
-                  <i class="fab fa-github"></i>
-                </button>
-
-              </div>
+           
             </form>
           </div>
         </div>
@@ -77,36 +62,10 @@
         <img src="https://images.unsplash.com/photo-1519750157634-b6d493a0f77c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" class="w-100 rounded-4 shadow-4"
           alt="" />
       </div>
-    </div>
+
 
     
-      <div class="right">
-      <h1>Login</h1>
-      <p>Don't have an account? <a [routerLink]="['/auth/register']">Creat Your Account</a> it takes less than a minute</p>
-      <div class="inputs">
-        <input type="text" placeholder="user name">
-        <br>
-        <input type="password" placeholder="password">
-      </div>
-        
-        <br><br>
-        
-      <div class="remember-me--forget-password">
-          <!-- Angular -->
-    <label>
-      <input type="checkbox" name="item" checked/>
-      <span class="text-checkbox">Remember me</span>
-    </label>
-        <p>forget password?</p>
-      </div>
-        
-        <br>
-        <button>Login</button>
-    </div>
-    
-
-  </div>
+     
 
   <!-- Jumbotron -->
-</section>
-<!-- Section: Design Block -->
+

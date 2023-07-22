@@ -22,7 +22,7 @@
             backdrop-filter: blur(30px);
             ">
           <div class="card-body p-5 shadow-5 text-center">
-            <h2 class="fw-bold mb-5">Sign up now</h2>
+            <h2 class="fw-bold mb-5">Register now</h2>
             <form (ngSubmit)="register()" >
    <div class="row">
    <div class="col-md-6 mb-4">       
@@ -60,7 +60,7 @@
    <!-- phone number input -->
     <div class="col-md-6 mb-4">    
       <div class="form-outline mb-4">
-        <input type="test" id="number"name="phoneNumber" class="form-control" [(ngModel)]="user.phoneNumber" #poneNumber="ngModel" placeholder="Phone number" required minlength="8"  />    
+        <input type="test" id="number"name="phoneNumber" class="form-control" [(ngModel)]="user.phoneNumber" #poneNumber="ngModel" placeholder="Phone number" required minlength="8"  />
         <div *ngIf="poneNumber.invalid && poneNumber.touched">
           <div  *ngIf="poneNumber.errors?.['required']" style="color: red;">
               *poneNumber is required
@@ -124,12 +124,12 @@
 
               <!-- Submit button -->
               <button type="submit" class="btn btn-primary btn-block mb-4"  >
-                Sign in
+                Sign up
               </button>
            
 
               <!-- Register buttons -->
-              <div class="text-center">
+            <!-- <div class="text-center">
                 <p>or sign up with:</p>
                 <button type="button" class="btn btn-link btn-floating mx-1">
                   <i class="fab fa-facebook-f"></i>
@@ -147,7 +147,7 @@
                   <i class="fab fa-github"></i>
                 </button>
 
-              </div>
+              </div>--> 
             </form>
           </div>
         </div>

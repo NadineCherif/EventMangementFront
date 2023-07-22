@@ -10,6 +10,8 @@ import { RegisterComponent } from './features/auth/containers/register/register.
 import { AuthModule } from './features/auth/auth.module';
 import { TicketsComponent } from './features/tickets/tickets.component';
 import { ReservationComponent } from './reservation/reservation.component';
+import { AuthGuard } from './features/auth/auth.guard';
+import { AdminDashboardComponent } from './features/admin/containers/admin-dashboard/admin-dashboard.component';
 
 
 const routes: Routes = [
@@ -46,11 +48,21 @@ component: RegisterComponent,
 {
   path: "Ticket",
   component: TicketsComponent,
+  canActivate: [AuthGuard] 
 },
 {path: "Reservation",
 component: ReservationComponent,
+canActivate: [AuthGuard] 
 }
-
+,{
+  path:'admin-dashboard',
+  component:AdminDashboardComponent,
+}
+,{
+  path:'Events',
+  component:EventPageComponent,
+  canActivate: [AuthGuard] 
+},
 
 ];
 

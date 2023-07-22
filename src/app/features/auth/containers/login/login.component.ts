@@ -20,6 +20,7 @@ export class LoginComponent {
     
    
   };
+  errorMessage: string | null = null;
   login(){
     var data = this.loginData;
     
@@ -28,21 +29,31 @@ export class LoginComponent {
         console.log("heey login",res);
         console.log("heey login");
         localStorage.setItem('token',res.token);
-        localStorage.setItem('role',res.token);
-        this.routeByRole(res.role);      
+        localStorage.setItem('role',res.role);
+        this.routeByRole(res.role);    
+       // this.router$.navigate(['/list-events']);  
         
       },
       err=>{
         console.log("unauthorized");
+        this.errorMessage = "Unauthorized. Invalid username or password.";
 
       }
     )
   }
+  logout(){
+    this._authService.logout();
+    this.router$.navigate(['/login']);
+  }
 
   routeByRole(role: string){
+    
+    console.log('rooole',role);
     // ADMIN ORGANIZER USER
-    if (role === "ADMIN"){
-      this.router$.navigate(['admin-dash']); // PATH NAME
+    if (role === "Admin"){
+      console.log((role === "Admin"));
+      console.log('admin entered succeffully');
+      this.router$.navigate(['/admin-dashboard']); // PATH NAME
     }
     else if(role === "ORG"){
       this.router$.navigate(['org-dash']); // PATH NAME

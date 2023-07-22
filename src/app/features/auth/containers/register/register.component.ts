@@ -24,12 +24,13 @@ export class RegisterComponent  implements OnInit  {
   user: User = {
     firstname: '',
     lastname:'',
-    phoneNumber: 0,
+    phoneNumber:0 ,
     email:'',
     password:'',
     role:'',
    
   };
+
   ngOnInit(): void {
     console.log("holaa");
   }
